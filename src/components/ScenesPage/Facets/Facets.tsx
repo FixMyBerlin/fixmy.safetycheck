@@ -14,6 +14,7 @@ import {
 } from './FacetsButtons'
 import { FacetsHeadline } from './FacetsHeadline'
 import { FooterLinks } from './FooterLinks'
+import { HelpButton } from './HelpButton'
 import { Logo } from './Logo'
 import { PresetDropdown, PresetDropdownProps } from './PresetDropdown'
 import { ResetFilterButton } from './ResetFilterButton'
@@ -86,7 +87,10 @@ export const Facets: React.FC<FacetsProps> = ({
 
         <PresetDropdown handlePresetClick={handlePresetClick} />
 
-        <ResetFilterButton onClick={handleResetFilter} />
+        <div className="mb-6 flex justify-between">
+          <ResetFilterButton onClick={handleResetFilter} />
+          <HelpButton />
+        </div>
 
         {mainAggregations.map(([aggregationKey, aggregation]) => {
           const { buckets } = aggregation
