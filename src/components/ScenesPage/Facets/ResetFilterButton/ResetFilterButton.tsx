@@ -11,7 +11,7 @@ export const ResetFilterButton: React.FC<Props> = ({ onClick }) => {
   const { resetFilterEnabled } = useStore(useStoreResetFilterEnabled)
 
   return (
-    <p className="mb-6">
+    <p>
       <button
         type="button"
         onClick={resetFilterEnabled ? onClick : undefined}

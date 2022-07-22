@@ -12,7 +12,6 @@ import {
   useStoreExperimentData,
   useStorePreset,
 } from '~/components/ScenesPage/store'
-import { isProduction } from '~/components/utils'
 
 const MyDataIndex = ({
   location,
